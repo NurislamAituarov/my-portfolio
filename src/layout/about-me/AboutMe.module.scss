@@ -1,0 +1,25 @@
+.me {
+  @apply mt-40 mb-6 text-center bg-zinc-900 relative rounded;
+
+  .image-wrapper {
+    @apply mb-6;
+    span {
+      margin-top: -3rem !important;
+    }
+
+    .img {
+      @apply rounded-full mx-auto relative -top-10 object-cover object-center;
+      height: 190px !important;
+    }
+  }
+
+  .heading {
+    @apply mb-5 text-3xl font-semibold text-white;
+    span {
+      @apply mr-2;
+    }
+    img {
+      display: inline;
+    }
+  }
+}
