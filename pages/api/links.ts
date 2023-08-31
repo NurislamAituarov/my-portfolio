@@ -1,15 +1,12 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { TLinks } from '@/types/interface';
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-type Data = {
-  name: string;
-};
 
 const links = {
   _id: 'link_1',
   icon: {
     path: '',
-    with: 76,
+    width: 76,
   },
   gradient: {
     from: '#13E780',
@@ -17,6 +14,6 @@ const links = {
   },
 };
 
-export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-  res.status(200).json({ name: 'John Doe' });
+export default function handler(req: NextApiRequest, res: NextApiResponse<TLinks>) {
+  res.status(200).json(links);
 }
