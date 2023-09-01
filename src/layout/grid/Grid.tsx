@@ -1,9 +1,17 @@
 import { TLinks } from '@/types/interface';
+import { GridItem } from './GridItem';
+import styles from './grid.module.scss';
 
 interface IPropsLinks {
-  links: TLinks;
+  links: TLinks[];
 }
 
 export function Grid({ links }: IPropsLinks) {
-  return <></>;
+  return (
+    <div className={styles.grid}>
+      {links.map((link) => {
+        return <GridItem item={link} key={link._id} />;
+      })}
+    </div>
+  );
 }

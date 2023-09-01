@@ -19,7 +19,7 @@ export function DescriptionButton({ description }: IDescriptionButton) {
         <span>Обо мне</span>
       </button>
 
-      {isShow && <article>{description}</article>}
+      {isShow && <article className="scaleIn">{description}</article>}
     </div>
   );
 }

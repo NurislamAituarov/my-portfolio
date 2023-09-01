@@ -12,6 +12,8 @@ export type TLinks = {
   _id: string;
   icon: IIcon;
   gradient: IGradient;
+  link: string;
+  title: string;
 };
 
 export interface IPropsHome {
