@@ -1,0 +1,33 @@
+.grid {
+  @apply flex flex-wrap mt-6 mb-10;
+  gap: 1rem;
+
+  .item {
+    @apply relative;
+
+    flex: 1 1 calc((100% / 4) - 2rem);
+
+    .gradient {
+      @apply flex justify-center items-center h-32 rounded-xl rounded-tr-none rounded-bl-none border-purple-600 border border-solid relative z-10;
+      transition: 0.5s;
+      background-size: 200% auto;
+    }
+
+    &:hover {
+      .gradient {
+        @apply rounded-xl rounded-br-none rounded-tl-none;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+        background-position: right center;
+      }
+
+      div:nth-child(3) {
+        @apply hidden;
+      }
+    }
+
+    .title {
+      @apply text-white opacity-80 font-medium mt-2 mb-1;
+      font-size: 1.09rem;
+    }
+  }
+}

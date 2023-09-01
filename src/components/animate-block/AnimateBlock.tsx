@@ -1,3 +1,5 @@
+import styles from './AnimateBlock.module.scss';
+
 export function AnimateBlock() {
-  return <></>;
+  return <div className={styles.animation}></div>;
 }
