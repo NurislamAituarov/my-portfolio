@@ -6,51 +6,51 @@ const links = [
   {
     _id: 'link_1',
     icon: {
-      path: '/item1.jpg',
+      name: 'autoA',
       width: 76,
     },
     gradient: {
       from: '#13E780',
       to: '#00bbd5',
     },
-    link: 'ddddddddddddddddddddddddddddd',
-    title: 'Пэт проект',
+    link: 'https://nurislamaituarov.github.io/auto-shop-project',
+    title: 'Auto shop project',
   },
   {
     _id: 'link_2',
     icon: {
-      path: '/item1.jpg',
+      name: 'todo',
       width: 76,
     },
     gradient: {
-      from: '#13E780',
-      to: '#00bbd5',
+      from: '#ddd6fe',
+      to: '#c026d3',
     },
-    link: 'ddddddddddddddddddddddddddddd',
-    title: 'Пэт проект',
+    link: 'https://nurislamaituarov.github.io/ToDo-List-Test',
+    title: 'ToDo List',
   },
   {
     _id: 'link_3',
     icon: {
-      path: '/item1.jpg',
+      name: 'auth',
       width: 76,
     },
     gradient: {
-      from: '#13E780',
-      to: '#00bbd5',
+      from: '#4ade80',
+      to: '#60a5fa',
     },
-    link: 'ddddddddddddddddddddddddddddd',
-    title: 'Пэт проект',
+    link: 'https://nurislamaituarov.github.io/project-auth',
+    title: 'Project authorization',
   },
   {
     _id: 'link_4',
     icon: {
-      path: '/item1.jpg',
+      name: 'todo',
       width: 76,
     },
     gradient: {
-      from: '#13E780',
-      to: '#00bbd5',
+      from: '#dc2626',
+      to: '#fb923c',
     },
     link: 'ddddddddddddddddddddddddddddd',
     title: 'Пэт проект',
@@ -58,15 +58,28 @@ const links = [
   {
     _id: 'link_5',
     icon: {
-      path: '/item1.jpg',
+      name: 'auto',
+      width: 76,
+    },
+    gradient: {
+      from: '#d1d5db',
+      to: '#22c55e',
+    },
+    link: 'ddddddddddddddddddddddddddddd',
+    title: 'Пэт проект',
+  },
+  {
+    _id: 'link_6',
+    icon: {
+      name: 'logistic',
       width: 76,
     },
     gradient: {
       from: '#13E780',
       to: '#00bbd5',
     },
-    link: 'ddddddddddddddddddddddddddddd',
-    title: 'Пэт проект',
+    link: 'https://nurislamaituarov.github.io/logistics-project/#/load',
+    title: 'Logistic project',
   },
 ];
 

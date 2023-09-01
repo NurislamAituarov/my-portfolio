@@ -46,7 +46,7 @@ body {
 @keyframes scaleIn {
   0% {
     opacity: 0;
-    transform: scale(0.9);
+    transform: translateY(-30px) translateX(100px) scale(0.9);
   }
   50% {
     opacity: 0.3;
