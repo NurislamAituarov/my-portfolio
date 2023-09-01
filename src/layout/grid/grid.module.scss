@@ -8,7 +8,7 @@
     flex: 1 1 calc((100% / 4) - 2rem);
 
     .gradient {
-      @apply flex justify-center items-center h-32 rounded-xl rounded-tr-none rounded-bl-none border-purple-600 border border-solid relative z-10;
+      @apply flex justify-center items-center h-32 rounded-xl rounded-tr-none rounded-bl-none border-purple-500 border border-solid relative z-10;
       transition: 0.5s;
       background-size: 200% auto;
     }
