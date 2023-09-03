@@ -24,7 +24,7 @@ export function AboutMe({ me }: IPropsMe) {
       </div>
 
       <div className={styles.heading}>
-        <span>RED Group</span>
+        <span>My portfolio</span>
 
         <Image src={`${APP_URL}/verified.svg`} alt="verified" height={16} width={16} />
       </div>

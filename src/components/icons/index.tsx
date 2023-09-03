@@ -3,12 +3,14 @@ import icons from './IconsPath';
 export function Icon({ name }: { name: string }) {
   const viewBox = (name: string): string => {
     switch (name) {
+      case 'resume':
+        return '0 0 32 32';
+      case 'telegram':
+        return '0 0 24 24';
       case 'logistic':
         return '0 0 612 612';
-      case 'autoA':
-        return '0 0 50 50';
       case 'auto':
-        return '0 0 1000 600';
+        return '0 0 50 50';
       case 'todo':
         return '0 0 128 128';
       case 'auth':
@@ -24,7 +26,7 @@ export function Icon({ name }: { name: string }) {
         version="1.1"
         viewBox={viewBox(name)}
         width={name == 'auto' ? 176 : 76}
-        height={76}
+        height={60}
         fill="#0ea5e9"
         dangerouslySetInnerHTML={{ __html: icons[name] }}
       />
