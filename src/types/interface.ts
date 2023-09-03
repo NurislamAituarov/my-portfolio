@@ -17,7 +17,7 @@ export type TLinks = {
 };
 
 export interface IPropsHome {
-  links: TLinks;
+  links: TLinks[];
   me: TMeData;
 }
 
