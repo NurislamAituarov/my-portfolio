@@ -6,7 +6,7 @@ const links = [
   {
     _id: 'link_1',
     icon: {
-      name: 'autoA',
+      name: 'auto',
       width: 76,
     },
     gradient: {
@@ -45,28 +45,28 @@ const links = [
   {
     _id: 'link_4',
     icon: {
-      name: 'todo',
+      name: 'telegram',
       width: 76,
     },
     gradient: {
       from: '#dc2626',
       to: '#fb923c',
     },
-    link: 'ddddddddddddddddddddddddddddd',
-    title: 'Пэт проект',
+    link: ' https://t.me/NurislamAituarov',
+    title: 'Telegram',
   },
   {
     _id: 'link_5',
     icon: {
-      name: 'auto',
+      name: 'resume',
       width: 76,
     },
     gradient: {
-      from: '#d1d5db',
+      from: '#6b2d2d',
       to: '#22c55e',
     },
-    link: 'ddddddddddddddddddddddddddddd',
-    title: 'Пэт проект',
+    link: '/resume.pdf',
+    title: 'Job resume',
   },
   {
     _id: 'link_6',

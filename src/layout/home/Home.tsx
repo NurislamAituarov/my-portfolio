@@ -20,7 +20,7 @@ export function Home({ links, me }: IPropsHome) {
 
   return (
     <section className={cn.section}>
-      <MetaTitle title="RED Links | Все полезные ссылки тут" />
+      <MetaTitle title="My portfolio | Все полезные ссылки тут" />
       <div className={cn.container}>
         <AboutMe me={me} />
         <Grid links={links} />
