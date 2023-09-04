@@ -8,9 +8,25 @@
     flex: 1 1 calc((100% / 4) - 2rem);
 
     .gradient {
-      @apply flex justify-center items-center h-32 rounded-xl rounded-tr-none rounded-bl-none border-purple-500 border border-solid relative z-10;
+      @apply overflow-hidden flex justify-center items-center h-32 rounded-xl rounded-tr-none rounded-bl-none border-purple-500 border border-solid relative z-10;
       transition: 0.5s;
       background-size: 200% auto;
+
+      .popup-options {
+        @apply absolute w-full h-7 bg-black -bottom-10 left-0 z-10 duration-500 flex justify-center items-center;
+        background-size: 200% auto;
+
+        span {
+          @apply text-cyan-200 text-sm font-semibold duration-200;
+        }
+
+        &:hover {
+          background-position: right center;
+          span {
+            @apply text-black;
+          }
+        }
+      }
     }
 
     &:hover {
@@ -18,6 +34,10 @@
         @apply rounded-xl rounded-br-none rounded-tl-none;
         box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
         background-position: right center;
+
+        .popup-options {
+          @apply bottom-0;
+        }
       }
 
       div:nth-child(3) {

@@ -1,82 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --primary-color: #ff3850;
-  --bg-color: #111012;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  overflow-x: hidden;
-  margin-right: calc(-1 * (100vw - 100%));
-  color: rgb(var(--foreground-rgb));
-  background: var(--bg-color);
-  font-family: 'Source Serif 4', serif;
-}
-
-/* полоса прокрутки (скроллбар) */
-::-webkit-scrollbar {
-  width: 12px;
-  height: auto;
-  background-color: black;
-}
-/* ползунок скроллбара */
-::-webkit-scrollbar-thumb {
-  background-color: rgb(114, 0, 0);
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  padding: 9px 15px;
+  border: 1px solid #ececec;
   border-radius: 5px;
+  color: gray;
 }
 
-.fade {
-  animation-name: fade;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-}
-.scaleIn {
-  animation-name: scaleIn;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes scaleIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px) translateX(100px) scale(0.9);
-  }
-  50% {
-    opacity: 0.3;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-// Text Animation
-
-.container-text {
-  width: max-content;
+.animate {
+  font-size: 50px;
+  border-bottom: 2px solid #ccc;
 }
 
 .animate span {
@@ -188,7 +124,7 @@ a.repeat:hover {
 /* Animation One */
 
 .one span {
-  // color: #24a8e6;
+  color: #24a8e6;
   opacity: 0;
   transform: translate(-150px, -50px) rotate(-180deg) scale(3);
   animation: revolveScale 0.4s forwards;
@@ -260,7 +196,7 @@ a.repeat:hover {
 /* Animation Four */
 
 .four span {
-  // color: #8d6a00;
+  color: #8d6a00;
   opacity: 0;
   transform: translate(0, -100px) rotate(360deg) scale(0);
   animation: revolveDrop 0.3s forwards;

@@ -1,0 +1,28 @@
+.modal {
+  @apply bg-black absolute z-30 rounded-lg text-white p-5;
+  width: 670px;
+  min-height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-name: popup-anim;
+}
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+@keyframes popup-anim {
+  to {
+    opacity: 0;
+  }
+
+  from {
+    opacity: 1;
+  }
+}
