@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { APP_URL } from '@/utils/constants';
 import { EmailButton } from '@/components/base/email-btn/EmailButton';
 import { DescriptionButton } from '@/components/base/description-btn/DescriptionButton';
+import { TextAnimation } from '@/components/base/text-animation/TextAnimation';
 
 interface IPropsMe {
   me: TMeData;
@@ -24,7 +25,8 @@ export function AboutMe({ me }: IPropsMe) {
       </div>
 
       <div className={styles.heading}>
-        <span>My portfolio</span>
+        <TextAnimation text="My portfolio" animationClass="one" />
+        {/* <span>My portfolio</span> */}
 
         <Image src={`${APP_URL}/verified.svg`} alt="verified" height={16} width={16} />
       </div>

@@ -3,13 +3,34 @@ import styles from './grid.module.scss';
 import Image from 'next/image';
 import { AnimateBlock } from '@/components/animate-block/AnimateBlock';
 import { Icon } from '@/components/icons';
+import { useEffect, useRef, useState } from 'react';
+import { PopUpModal } from '@/components/base/popup-modal/PopUpModal';
+import { createPortal } from 'react-dom';
 
 interface IGridItem {
   item: TLinks;
 }
 
 export function GridItem({ item }: IGridItem) {
-  function handelMore() {}
+  const [openModal, setOpenModal] = useState(false);
+  const ref = useRef<Element | null>(null);
+
+  useEffect(() => {
+    ref.current = document.querySelector<HTMLElement>('#portal');
+  }, []);
+
+  useEffect(() => {
+    if (openModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'visible';
+      document.body.style.overflowX = 'hidden';
+    }
+  }, [openModal]);
+
+  const handelMore = () => {
+    setOpenModal((val) => !val);
+  };
 
   return (
     <a href={item.link} rel="noreferrer" target="_blank" className={styles.item}>
@@ -34,6 +55,13 @@ export function GridItem({ item }: IGridItem) {
       </div>
       <div className={styles.title}>{item.title}</div>
       {item._id === 'link_2' && <AnimateBlock />}
+
+      {openModal && ref.current
+        ? createPortal(
+            <PopUpModal text={'Delete Account?'} open={openModal} handelMore={handelMore} />,
+            ref.current,
+          )
+        : null}
     </a>
   );
 }
