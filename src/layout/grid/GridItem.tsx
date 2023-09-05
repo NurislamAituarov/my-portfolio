@@ -47,14 +47,9 @@ export function GridItem({ item }: IGridItem) {
       <div className={styles.title}>{item.title}</div>
       {item._id === 'link_2' && <AnimateBlock />}
 
-      {openModal && ref.current
+      {ref.current
         ? createPortal(
-            <PopUpModal
-              text={'Delete Account?'}
-              open={openModal}
-              handelMore={handelMore}
-              item={item}
-            />,
+            <PopUpModal open={openModal} handelMore={handelMore} item={item} />,
             ref.current,
           )
         : null}

@@ -84,6 +84,8 @@ body {
 
 .animate span {
   display: inline-block;
+  text-transform: uppercase;
+  @apply mr-2;
 }
 
 a.repeat {
