@@ -1,0 +1,15 @@
+.popup-options {
+  @apply absolute w-full h-7 bg-black -bottom-10 left-0 z-10 duration-500 flex justify-center items-center;
+  background-size: 200% auto;
+
+  span {
+    @apply text-cyan-200 text-sm font-semibold duration-200;
+  }
+
+  &:hover {
+    background-position: right center;
+    span {
+      @apply text-black;
+    }
+  }
+}

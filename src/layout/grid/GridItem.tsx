@@ -1,11 +1,12 @@
-import { TLinks } from '@/types/interface';
-import styles from './grid.module.scss';
-import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
+
+import { PopUpModal } from '@/components/popup-modal/PopUpModal';
 import { AnimateBlock } from '@/components/animate-block/AnimateBlock';
 import { Icon } from '@/components/icons';
-import { useEffect, useRef, useState } from 'react';
-import { PopUpModal } from '@/components/base/popup-modal/PopUpModal';
-import { createPortal } from 'react-dom';
+import { TLinks } from '@/types/interface';
+import styles from './grid.module.scss';
+import { DetailsBtn } from '@/components/base/details-btn/DetailsBtn';
 
 interface IGridItem {
   item: TLinks;
@@ -33,7 +34,7 @@ export function GridItem({ item }: IGridItem) {
   };
 
   return (
-    <a href={item.link} rel="noreferrer" target="_blank" className={styles.item}>
+    <a href={item.link[0]} rel="noreferrer" target="_blank" className={styles.item}>
       <div
         className={styles.gradient}
         style={{
@@ -41,24 +42,19 @@ export function GridItem({ item }: IGridItem) {
         }}>
         <Icon name={item.icon.name} />
 
-        <div
-          className={styles['popup-options']}
-          style={{
-            backgroundImage: 'linear-gradient(to right, #000000 0%, #b40808 51%, #980000 100%)',
-          }}
-          onClick={(e) => {
-            e.preventDefault();
-            handelMore();
-          }}>
-          <span>Подробнее</span>
-        </div>
+        {!['link_4', 'link_5'].includes(item._id) && <DetailsBtn handelMore={handelMore} />}
       </div>
       <div className={styles.title}>{item.title}</div>
       {item._id === 'link_2' && <AnimateBlock />}
 
       {openModal && ref.current
         ? createPortal(
-            <PopUpModal text={'Delete Account?'} open={openModal} handelMore={handelMore} />,
+            <PopUpModal
+              text={'Delete Account?'}
+              open={openModal}
+              handelMore={handelMore}
+              item={item}
+            />,
             ref.current,
           )
         : null}

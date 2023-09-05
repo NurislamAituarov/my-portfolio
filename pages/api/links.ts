@@ -13,8 +13,16 @@ const links = [
       from: '#13E780',
       to: '#00bbd5',
     },
-    link: 'https://nurislamaituarov.github.io/auto-shop-project',
+    link: [
+      'https://nurislamaituarov.github.io/auto-shop-project',
+      'https://github.com/NurislamAituarov/auto-shop-project',
+    ],
     title: 'Auto shop project',
+    about_application: [
+      'React, State Management redux и React-Redux, axios для доступа к API, Material-UI, TypeScript для типизации,SCSS, CSS модуль.',
+      'Node.js + Expres создал эндпоинты, цикл запросов CRUD, подключил базу данных PostgreSQL.',
+      'Адаптивная верстка для мобильных устройств.',
+    ],
   },
   {
     _id: 'link_2',
@@ -26,8 +34,14 @@ const links = [
       from: '#ddd6fe',
       to: '#c026d3',
     },
-    link: 'https://nurislamaituarov.github.io/ToDo-List-Test',
+    link: [
+      'https://nurislamaituarov.github.io/ToDo-List-Test',
+      'https://github.com/NurislamAituarov/ToDo-List-Test',
+    ],
     title: 'ToDo List',
+    about_application: [
+      'React, Redux/MobX, TypeScript, Для анимации использовал библиотеку react-transition-group, SCSS.',
+    ],
   },
   {
     _id: 'link_3',
@@ -39,8 +53,15 @@ const links = [
       from: '#4ade80',
       to: '#60a5fa',
     },
-    link: 'https://nurislamaituarov.github.io/project-auth',
+    link: [
+      'https://nurislamaituarov.github.io/project-auth',
+      'https://github.com/NurislamAituarov/project-auth',
+    ],
     title: 'Project authorization',
+    about_application: [
+      'React, Redux, Material-UI, React Hook-Form,',
+      'Node.js, Express, MongoDB, для авторизации использовал JSON Web Token.',
+    ],
   },
   {
     _id: 'link_4',
@@ -52,7 +73,7 @@ const links = [
       from: '#dc2626',
       to: '#fb923c',
     },
-    link: ' https://t.me/NurislamAituarov',
+    link: ['https://t.me/NurislamAituarov'],
     title: 'Telegram',
   },
   {
@@ -65,7 +86,7 @@ const links = [
       from: '#6b2d2d',
       to: '#22c55e',
     },
-    link: '/resume.pdf',
+    link: ['/resume.pdf'],
     title: 'Job resume',
   },
   {
@@ -78,8 +99,22 @@ const links = [
       from: '#13E780',
       to: '#00bbd5',
     },
-    link: 'https://nurislamaituarov.github.io/logistics-project/#/load',
+    link: [
+      'https://nurislamaituarov.github.io/logistics-project/#/load',
+      'https://github.com/NurislamAituarov/logistics-project',
+    ],
     title: 'Logistic project',
+    about_application: [
+      'Vue, VueX, Vuetify, sortablejs. Реализовано адаптивная верстка для мобильных устройств.',
+    ],
+    technical_task: [
+      'Колонки таблицы должны иметь возможность изменять свою ширину.',
+      'Колонки должны быть перетаскиваемыми для изменения их порядка.',
+      'Строки должны быть перетаскиваемыми для изменения их порядка.',
+      'Должен быть реализован функционал добавления, удаления и изменения строк.',
+      'При изменении ширины заголовка таблицы или при перетаскивании колонок должна появляться плашка с предупреждением "Сохранить изменения". Если пользователь не сохранит изменения и обновит страницу, то изменения не должны быть применены.',
+      'Должна быть общая настройка, позволяющая скрыть колонки таблицы и добавить новые. Также должна быть возможность изменить порядок колонок путем их перетаскивания. Все изменения должны быть реактивными и применяться в таблице.',
+    ],
   },
 ];
 
