@@ -17,7 +17,7 @@ const links = [
       'https://nurislamaituarov.github.io/auto-shop-project',
       'https://github.com/NurislamAituarov/auto-shop-project',
     ],
-    title: 'Auto shop project',
+    title: 'Auto Shop App',
     about_application: [
       'React, State Management redux и React-Redux, axios для доступа к API, Material-UI, TypeScript для типизации,SCSS, CSS модуль.',
       'Node.js + Expres создал эндпоинты, цикл запросов CRUD, подключил базу данных PostgreSQL.',
@@ -57,24 +57,37 @@ const links = [
       'https://nurislamaituarov.github.io/project-auth',
       'https://github.com/NurislamAituarov/project-auth',
     ],
-    title: 'Project authorization',
+    title: 'Authorization App',
     about_application: [
       'React, Redux, Material-UI, React Hook-Form,',
       'Node.js, Express, MongoDB, для авторизации использовал JSON Web Token.',
     ],
   },
   {
-    _id: 'link_4',
+    _id: 'link_6',
     icon: {
-      name: 'telegram',
+      name: 'logistic',
       width: 76,
     },
-    gradient: {
-      from: '#dc2626',
-      to: '#fb923c',
-    },
-    link: ['https://t.me/NurislamAituarov'],
-    title: 'Telegram',
+    gradient: { from: '#450a0a', to: '#dc2626' },
+    link: [
+      'https://nurislamaituarov.github.io/logistics-project/#/load',
+      'https://github.com/NurislamAituarov/logistics-project',
+    ],
+    title: 'Logistic App',
+    about_application: [
+      'Vue, VueX, Vuetify, sortablejs. Реализовано адаптивная верстка для мобильных устройств.',
+    ],
+    technical_task: [
+      'Колонки таблицы должны иметь возможность изменять свою ширину.',
+      'Колонки должны быть перетаскиваемыми для изменения их порядка.',
+      'Строки должны быть перетаскиваемыми для изменения их порядка.',
+      'Должен быть реализован функционал добавления, удаления и изменения строк.',
+      'При изменении ширины заголовка таблицы или при перетаскивании колонок должна появляться плашка с предупреждением "Сохранить изменения". Если пользователь не сохранит изменения и обновит страницу, то изменения не должны быть применены.',
+      'Должна быть общая настройка, позволяющая скрыть колонки таблицы и добавить новые. Также должна быть возможность изменить порядок колонок путем их перетаскивания. Все изменения должны быть реактивными и применяться в таблице.',
+      'Реализовано адаптивная верстка для мобильных устройств.',
+      'Настроил деплой приложения через GitHub Actions.',
+    ],
   },
   {
     _id: 'link_5',
@@ -90,31 +103,17 @@ const links = [
     title: 'Job resume',
   },
   {
-    _id: 'link_6',
+    _id: 'link_4',
     icon: {
-      name: 'logistic',
+      name: 'telegram',
       width: 76,
     },
     gradient: {
       from: '#13E780',
       to: '#00bbd5',
     },
-    link: [
-      'https://nurislamaituarov.github.io/logistics-project/#/load',
-      'https://github.com/NurislamAituarov/logistics-project',
-    ],
-    title: 'Logistic project',
-    about_application: [
-      'Vue, VueX, Vuetify, sortablejs. Реализовано адаптивная верстка для мобильных устройств.',
-    ],
-    technical_task: [
-      'Колонки таблицы должны иметь возможность изменять свою ширину.',
-      'Колонки должны быть перетаскиваемыми для изменения их порядка.',
-      'Строки должны быть перетаскиваемыми для изменения их порядка.',
-      'Должен быть реализован функционал добавления, удаления и изменения строк.',
-      'При изменении ширины заголовка таблицы или при перетаскивании колонок должна появляться плашка с предупреждением "Сохранить изменения". Если пользователь не сохранит изменения и обновит страницу, то изменения не должны быть применены.',
-      'Должна быть общая настройка, позволяющая скрыть колонки таблицы и добавить новые. Также должна быть возможность изменить порядок колонок путем их перетаскивания. Все изменения должны быть реактивными и применяться в таблице.',
-    ],
+    link: ['https://t.me/NurislamAituarov'],
+    title: 'Telegram',
   },
 ];
 

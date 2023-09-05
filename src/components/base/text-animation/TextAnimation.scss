@@ -16,6 +16,8 @@ a:visited {
 }
 
 .animate span {
+  @apply mr-1;
+
   display: inline-block;
 }
 

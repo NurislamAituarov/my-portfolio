@@ -1,4 +1,5 @@
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
+import { Transition } from 'react-transition-group';
 import cn from 'classnames';
 
 import { Context } from '@/utils/context';
@@ -7,45 +8,62 @@ import { CloseBtn } from '../base/close-btn/CloseBtn';
 import styles from './PopUpModal.module.scss';
 
 interface IPopUpModal {
-  text: string;
   open: boolean;
   item: TLinks;
   handelMore: () => void;
 }
 
-export const PopUpModal = ({ text, open, handelMore, item }: IPopUpModal) => {
+export const PopUpModal = ({ open, handelMore, item }: IPopUpModal) => {
   const links = useContext(Context);
+
   return (
     <>
-      <div className={open ? styles.modal : ''}>
-        <p>Названия: {item.title} </p>
-        {item.technical_task && (
-          <p>
-            Техническое задания:
-            <br />
-            {item.technical_task.map((el, ind) => {
-              return <div key={ind}>- {el}</div>;
-            })}
-          </p>
-        )}
-        <p>
-          Используемый стек:
-          <br></br>
-          <strong>FrontEnd</strong> :
-          <span>{item.about_application && item.about_application[0]}</span>
-          {item.about_application && item.about_application[1] && (
-            <>
+      <Transition in={open} timeout={300} unmountOnExit={true}>
+        {(state) => (
+          <div className={open ? `${styles.modal} ${styles[state]}` : ''}>
+            <div className={styles.title}>
+              <strong>Названия :</strong> {item.title}
+            </div>
+            {item.technical_task && (
+              <strong>
+                Техническое задания:
+                <br />
+                {item.technical_task.map((el, ind) => {
+                  return <div key={ind}>- {el}</div>;
+                })}
+              </strong>
+            )}
+            <div className={styles.title}>
+              <strong>Используемый стек:</strong>
               <br></br>
-              <strong>BackEnd</strong> :<span>{item.about_application[1]}</span>
-            </>
-          )}
-        </p>
-        <p>Ссылка на репозиторий GitHub: {item.link[1]}</p>
-        <p>Ссылка на приложения: {item.link[0]}</p>
+              <em>FrontEnd: </em>
+              <span>{item.about_application && item.about_application[0]}</span>
+              {item.about_application && item.about_application[1] && (
+                <>
+                  <br></br>
+                  <em>BackEnd :</em> <span>{item.about_application[1]}</span>
+                </>
+              )}
+            </div>
+            <div className={styles.title}>
+              <strong>Ссылка на репозиторий GitHub:</strong>{' '}
+              <a rel="noreferrer" target="_blank" href={item.link[1]}>
+                {item.link[1]}
+              </a>
+            </div>
+            <div className={styles.title}>
+              <strong>Ссылка на приложения:</strong>
+              <a rel="noreferrer" target="_blank" href={item.link[0]}>
+                {item.link[0]}
+              </a>
+            </div>
 
-        <CloseBtn type="type-1" handelMore={handelMore} />
-      </div>
-      <div className={styles.overlay} onClick={() => handelMore()} />
+            <CloseBtn type="type-1" handelMore={handelMore} />
+          </div>
+        )}
+      </Transition>
+
+      {open && <div className={styles.overlay} onClick={() => handelMore()} />}
     </>
   );
 };

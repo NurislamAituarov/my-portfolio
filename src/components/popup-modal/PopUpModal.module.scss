@@ -5,7 +5,20 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation-name: popup-anim;
+  opacity: 0;
+  transition: opacity 600ms ease-in-out;
+  .title {
+    strong {
+      @apply text-red-600;
+    }
+    em {
+      @apply text-red-400;
+    }
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
 }
 .overlay {
   width: 100vw;
@@ -17,12 +30,11 @@
   z-index: 10;
 }
 
-@keyframes popup-anim {
-  to {
-    opacity: 0;
-  }
-
-  from {
-    opacity: 1;
-  }
+.entering,
+.entered {
+  opacity: 1;
+}
+.exiting,
+.exited {
+  opacity: 0;
 }

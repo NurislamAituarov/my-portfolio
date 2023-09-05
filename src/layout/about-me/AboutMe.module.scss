@@ -15,9 +15,7 @@
 
   .heading {
     @apply mb-5 text-3xl font-bold text-white flex items-center justify-center;
-    span {
-      @apply mr-2;
-    }
+
     img {
       display: inline;
     }
