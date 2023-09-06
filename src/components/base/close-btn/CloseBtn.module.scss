@@ -1,5 +1,8 @@
 .close {
-  @apply absolute -right-10 -top-10;
+  @apply sticky right-0 top-0 grid justify-end;
+  button {
+    @apply bg-black;
+  }
 }
 
 .type-1 {
@@ -120,5 +123,11 @@
     &:after {
       transform: translate(-50%, -50%) rotate(225deg);
     }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .close {
+    @apply right-0 top-0;
   }
 }

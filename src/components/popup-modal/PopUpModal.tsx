@@ -14,13 +14,15 @@ interface IPopUpModal {
 }
 
 export const PopUpModal = ({ open, handelMore, item }: IPopUpModal) => {
+  const refModal = useRef(null);
   const links = useContext(Context);
 
   return (
     <>
-      <Transition in={open} timeout={300} unmountOnExit={true}>
+      <Transition nodeRef={refModal} in={open} timeout={300} unmountOnExit={true}>
         {(state) => (
-          <div className={open ? `${styles.modal} ${styles[state]}` : ''}>
+          <div ref={refModal} className={open ? `${styles.modal} ${styles[state]}` : ''}>
+            <CloseBtn type="type-1" handelMore={handelMore} />
             <div className={styles.title}>
               <strong>Названия :</strong> {item.title}
             </div>
@@ -57,8 +59,6 @@ export const PopUpModal = ({ open, handelMore, item }: IPopUpModal) => {
                 {item.link[0]}
               </a>
             </div>
-
-            <CloseBtn type="type-1" handelMore={handelMore} />
           </div>
         )}
       </Transition>

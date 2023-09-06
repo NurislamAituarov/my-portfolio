@@ -21,7 +21,12 @@ export function GridItem({ item }: IGridItem) {
   }, []);
 
   useEffect(() => {
-    if (openModal) {
+    const portal = document.getElementById('portal');
+    if (portal) portal.style.display = 'none';
+
+    if (openModal && portal) {
+      portal.style.display = 'flex';
+
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'visible';
@@ -47,12 +52,11 @@ export function GridItem({ item }: IGridItem) {
       <div className={styles.title}>{item.title}</div>
       {item._id === 'link_2' && <AnimateBlock />}
 
-      {ref.current
-        ? createPortal(
-            <PopUpModal open={openModal} handelMore={handelMore} item={item} />,
-            ref.current,
-          )
-        : null}
+      {ref.current &&
+        createPortal(
+          <PopUpModal open={openModal} handelMore={handelMore} item={item} />,
+          ref.current,
+        )}
     </a>
   );
 }
