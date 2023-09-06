@@ -13,3 +13,9 @@
     }
   }
 }
+
+@media screen and (max-width: 520px) {
+  .popup-options {
+    @apply bottom-0;
+  }
+}

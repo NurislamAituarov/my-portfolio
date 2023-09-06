@@ -7,9 +7,9 @@ interface ICloseBtn {
 
 export function CloseBtn({ type, handelMore }: ICloseBtn) {
   return (
-    <div className={styles.close} onClick={handelMore}>
+    <div className={styles.close}>
       {type === 'type-1' && (
-        <button className={styles[type]}>
+        <button className={styles[type]} onClick={handelMore}>
           <span className={styles.inner}>
             <span className={styles.label}>Close</span>
           </span>

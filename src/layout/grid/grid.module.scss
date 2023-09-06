@@ -35,3 +35,19 @@
     }
   }
 }
+
+@media screen and (max-width: 1020px) {
+  .grid {
+    .item {
+      flex: 268px;
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .grid {
+    .item {
+      flex: 250px;
+    }
+  }
+}

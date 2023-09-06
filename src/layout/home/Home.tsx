@@ -1,17 +1,20 @@
 import { useCallback } from 'react';
 import { loadSlim } from 'tsparticles-slim';
 import Particles from 'react-tsparticles';
+import { useMediaQuery } from 'react-responsive';
 
-import { IPropsHome, TLinks } from '@/types/interface';
+import { IPropsHome } from '@/types/interface';
 import { MetaTitle } from '@/components/meta-title/MetaTitle';
-import { AboutMe } from '../about-me/AboutMe';
-import { Grid } from '../grid/Grid';
 import { Circles } from '@/components/circles/Circles';
 import { CONFIGURE_PARTICLES } from '@/utils/constants';
-import styles from './Home.module.scss';
 import { Context } from '@/utils/context';
+import { AboutMe } from '../about-me/AboutMe';
+import { Grid } from '../grid/Grid';
+import styles from './Home.module.scss';
 
 export function Home({ links, me }: IPropsHome) {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
   const particlesInit = useCallback(async (engine: any) => {
     await loadSlim(engine);
   }, []);
@@ -29,12 +32,14 @@ export function Home({ links, me }: IPropsHome) {
           <Grid links={links} />
         </div>
         <Circles />
-        <Particles
-          id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
-          options={CONFIGURE_PARTICLES}
-        />
+        {!isMobile && (
+          <Particles
+            id="tsparticles"
+            init={particlesInit}
+            loaded={particlesLoaded}
+            options={CONFIGURE_PARTICLES}
+          />
+        )}
       </section>
     </Context.Provider>
   );
