@@ -27,3 +27,13 @@
     @apply mt-28;
   }
 }
+@media screen and (max-width: 520px) {
+  .me {
+    .image-wrapper {
+      .img {
+        height: 150px !important;
+        width: 150px !important;
+      }
+    }
+  }
+}
