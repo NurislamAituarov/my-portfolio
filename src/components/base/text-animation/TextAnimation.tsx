@@ -32,7 +32,13 @@ export function TextAnimation({ text, animationClass }: IPropsTextAnimation) {
       <div className="container-text">
         <div className={classNames()} ref={refTextAnim}>
           {textTransformArr.map((el, ind) => {
-            return el !== ' ' ? <span key={ind}>{el}</span> : '  ';
+            return el !== ' ' ? (
+              <span key={ind} className="animate__letter">
+                {el}
+              </span>
+            ) : (
+              '  '
+            );
           })}
         </div>
       </div>

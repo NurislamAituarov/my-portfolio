@@ -47,10 +47,10 @@ export function GridItem({ item }: IGridItem) {
         }}>
         <Icon name={item.icon.name} />
 
-        {!['link_4', 'link_5'].includes(item._id) && <DetailsBtn handelMore={handelMore} />}
+        {!['link_6', 'link_5'].includes(item._id) && <DetailsBtn handelMore={handelMore} />}
       </div>
       <div className={styles.title}>{item.title}</div>
-      {item._id === 'link_2' && <AnimateBlock />}
+      {item._id === 'link_4' && <AnimateBlock />}
 
       {ref.current &&
         createPortal(

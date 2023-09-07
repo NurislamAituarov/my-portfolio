@@ -64,7 +64,7 @@ const links = [
     ],
   },
   {
-    _id: 'link_6',
+    _id: 'link_4',
     icon: {
       name: 'logistic',
       width: 76,
@@ -103,7 +103,7 @@ const links = [
     title: 'Job resume',
   },
   {
-    _id: 'link_4',
+    _id: 'link_6',
     icon: {
       name: 'telegram',
       width: 76,
