@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import { loadSlim } from 'tsparticles-slim';
 import Particles from 'react-tsparticles';
 import { useMediaQuery } from 'react-responsive';
