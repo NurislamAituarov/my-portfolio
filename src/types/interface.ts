@@ -16,6 +16,7 @@ export type TLinks = {
   title: string;
   about_application?: Array<string>;
   technical_task?: Array<string>;
+  description?: string;
 };
 
 export interface IPropsHome {
