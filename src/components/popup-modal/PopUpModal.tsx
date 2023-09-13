@@ -35,6 +35,13 @@ export const PopUpModal = ({ open, handelMore, item }: IPopUpModal) => {
                 })}
               </strong>
             )}
+            {item.description && (
+              <div className={styles.title}>
+                <strong>Краткое описание:</strong>
+                <br />
+                <span>{item.description}</span>
+              </div>
+            )}
             <div className={styles.title}>
               <strong>Используемый стек:</strong>
               <br></br>
