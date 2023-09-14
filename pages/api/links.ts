@@ -117,6 +117,19 @@ const links = [
     link: ['https://t.me/NurislamAituarov'],
     title: 'Telegram',
   },
+  {
+    _id: 'link_7',
+    icon: {
+      name: 'whatsapp',
+      width: 76,
+    },
+    gradient: {
+      from: '#22c55e',
+      to: '#6b2d2d',
+    },
+    link: ['https://wa.me/87053047662'],
+    title: 'Whatsapp',
+  },
 ];
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<TLinks[]>) {
