@@ -2,7 +2,7 @@
 import { TLinks } from '@/types/interface';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-const links = [
+export const links = [
   {
     _id: 'link_1',
     icon: {

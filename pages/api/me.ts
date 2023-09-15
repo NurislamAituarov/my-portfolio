@@ -2,7 +2,7 @@
 import { TMeData } from '@/types/interface';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-const me = {
+export const me = {
   siteName: 'Red Links',
   avatar: '/avatar.jpg',
   description: `Меня зовут Нурислам, Добрый день! Я хотел бы поделиться с вами моим опытом работы в качестве фронтенд разработчика. В течение 10 месяцев я работал над проектами по транспортной логистике, а также над редизайном сайта SkillFactory.
