@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './EmailButton.module.scss';
 import { APP_URL } from '@/utils/constants';
+import email from '@/assets/img/email.svg';
 
 export function EmailButton() {
   return (
@@ -11,7 +12,7 @@ export function EmailButton() {
         rel="noreferrer"
         title="nurislamajtuarov@gmail.com">
         <span>
-          <Image src={`${APP_URL}/email.svg`} alt="email" height={18} width={18} />
+          <Image src={email} alt="email" height={18} width={18} />
         </span>
         <span>Email</span>
       </a>

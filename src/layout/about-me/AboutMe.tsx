@@ -6,6 +6,7 @@ import { EmailButton } from '@/components/base/email-btn/EmailButton';
 import { DescriptionButton } from '@/components/base/description-btn/DescriptionButton';
 import { TextAnimation } from '@/components/base/text-animation/TextAnimation';
 import avatar from '@/assets/img/avatar.jpg';
+import verified from '@/assets/img/verified.svg';
 interface IPropsMe {
   me: TMeData;
 }
@@ -29,7 +30,7 @@ export function AboutMe({ me }: IPropsMe) {
         <TextAnimation text="My portfolio" animationClass="one" />
         {/* <span>My portfolio</span> */}
 
-        <Image src={`${APP_URL}/verified.svg`} alt="verified" height={16} width={16} />
+        <Image src={verified} alt="verified" height={16} width={16} />
       </div>
       <EmailButton />
       <DescriptionButton description={me.description} />
