@@ -15,7 +15,8 @@ export function AboutMe({ me }: IPropsMe) {
     <div className={styles.me}>
       <div className={styles['image-wrapper']}>
         <Image
-          src={`${APP_URL}/${me.avatar}`}
+          // src={`${APP_URL}/${me.avatar}`}
+          src="/avatar.jpg"
           width={190}
           height={190}
           alt={me.siteName}
