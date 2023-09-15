@@ -5,7 +5,7 @@ import { APP_URL } from '@/utils/constants';
 import { EmailButton } from '@/components/base/email-btn/EmailButton';
 import { DescriptionButton } from '@/components/base/description-btn/DescriptionButton';
 import { TextAnimation } from '@/components/base/text-animation/TextAnimation';
-
+import avatar from '@/assets/img/avatar.jpg';
 interface IPropsMe {
   me: TMeData;
 }
@@ -16,7 +16,7 @@ export function AboutMe({ me }: IPropsMe) {
       <div className={styles['image-wrapper']}>
         <Image
           // src={`${APP_URL}/${me.avatar}`}
-          src="/avatar.jpg"
+          src={avatar}
           width={190}
           height={190}
           alt={me.siteName}
