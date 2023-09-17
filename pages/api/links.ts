@@ -1,6 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { TLinks } from '@/types/interface';
 import type { NextApiRequest, NextApiResponse } from 'next';
+const linkResume =
+  process.env.NODE_ENV === 'development' ? '/resume.pdf' : '/my-portfolio/resume.pdf';
 
 export const links = [
   {
@@ -101,7 +103,7 @@ export const links = [
       from: '#6b2d2d',
       to: '#22c55e',
     },
-    link: ['/resume.pdf'],
+    link: [linkResume],
     title: 'Job resume',
   },
   {
