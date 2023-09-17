@@ -38,15 +38,8 @@ export function GridItem({ item }: IGridItem) {
     setOpenModal((val) => !val);
   };
 
-  const downloadedPdf = () => {};
-
   return (
-    <a
-      href={item.link[0]}
-      onClick={downloadedPdf}
-      rel="noreferrer"
-      target="_blank"
-      className={styles.item}>
+    <a href={item.link[0]} rel="noreferrer" target="_blank" className={styles.item}>
       <div
         className={styles.gradient}
         style={{
