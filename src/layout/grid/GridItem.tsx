@@ -7,7 +7,6 @@ import { Icon } from '@/components/icons';
 import { TLinks } from '@/types/interface';
 import styles from './grid.module.scss';
 import { DetailsBtn } from '@/components/base/details-btn/DetailsBtn';
-import resume from '@/assets/resume.pdf';
 
 interface IGridItem {
   item: TLinks;
@@ -39,20 +38,7 @@ export function GridItem({ item }: IGridItem) {
     setOpenModal((val) => !val);
   };
 
-  const downloadedPdf = () => {
-    item._id === 'link_5' &&
-      fetch('/resume.pdf')
-        .then((response) => response.blob())
-        .then((blob) => {
-          const url = window.URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.href = url;
-          a.download = 'resume.pdf';
-          document.body.appendChild(a);
-          a.click();
-          window.URL.revokeObjectURL(url);
-        });
-  };
+  const downloadedPdf = () => {};
 
   return (
     <a
