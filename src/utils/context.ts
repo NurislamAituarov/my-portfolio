@@ -1,4 +1,10 @@
 import { TLinks } from '@/types/interface';
 import { createContext } from 'react';
 
-export const Context = createContext<TLinks[] | null>(null);
+interface IContext {
+  links?: TLinks[];
+  skillsOpen?: boolean;
+  setSkillsOpen?: any;
+}
+
+export const Context = createContext<IContext | null>(null);
