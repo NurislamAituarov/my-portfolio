@@ -1,12 +1,15 @@
 import { TMeData } from '@/types/interface';
-import styles from './AboutMe.module.scss';
 import Image from 'next/image';
+
 import { APP_URL } from '@/utils/constants';
 import { EmailButton } from '@/components/base/email-btn/EmailButton';
 import { DescriptionButton } from '@/components/base/description-btn/DescriptionButton';
 import { TextAnimation } from '@/components/base/text-animation/TextAnimation';
 import avatar from '@/assets/img/avatar.jpg';
 import verified from '@/assets/img/verified.svg';
+import { SkillsBtn } from '@/components/skills/skills-btn/SkillsBtn';
+
+import styles from './AboutMe.module.scss';
 interface IPropsMe {
   me: TMeData;
 }
@@ -32,7 +35,10 @@ export function AboutMe({ me }: IPropsMe) {
 
         <Image src={verified} alt="verified" height={16} width={16} />
       </div>
-      <EmailButton />
+      <div style={{ display: 'flex', width: 'max-content', margin: '0 auto' }}>
+        <EmailButton />
+        <SkillsBtn />
+      </div>
       <DescriptionButton description={me.description} />
     </div>
   );
