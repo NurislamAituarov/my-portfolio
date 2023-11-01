@@ -1,9 +1,6 @@
-export const APP_URL =
-  process.env.NODE_ENV === 'development'
-    ? process.env.APP_URL
-    : `${process.env.APP_URL}/my-portfolio`;
-
-export const API_URL = `${APP_URL}/api`;
+export const APP_URL = process.env.APP_URL;
+export const API_URL =
+  process.env.NODE_ENV === 'development' ? `${APP_URL}/api` : `${APP_URL}/my-portfolio/api`;
 export const CONFIGURE_PARTICLES: Record<string, object | boolean> = {
   particles: {
     number: {
