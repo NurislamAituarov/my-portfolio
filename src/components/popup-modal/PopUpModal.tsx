@@ -31,7 +31,11 @@ export const PopUpModal = ({ open, handelMore, item }: IPopUpModal) => {
                 Техническое задания:
                 <br />
                 {item.technical_task.map((el, ind) => {
-                  return <div key={ind}>- {el}</div>;
+                  return (
+                    <div className={styles['technical-list']} key={ind}>
+                      - {el}
+                    </div>
+                  );
                 })}
               </strong>
             )}
