@@ -8,13 +8,12 @@ export function Icon({ name }: { name: string }) {
       case 'resume':
         return '0 0 32 32';
       case 'telegram':
+      case 'todo':
         return '0 0 24 24';
       case 'logistic':
         return '0 0 612 612';
       case 'auto':
         return '0 0 50 50';
-      case 'todo':
-        return '0 0 128 128';
       case 'auth':
         return '0 0 40 40';
       default:

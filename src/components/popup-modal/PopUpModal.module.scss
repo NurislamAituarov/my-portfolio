@@ -41,6 +41,10 @@
   opacity: 0;
 }
 
+.technical-list {
+  font-size: 12px;
+}
+
 @media screen and (max-width: 520px) {
   .modal {
     @apply text-xs;
