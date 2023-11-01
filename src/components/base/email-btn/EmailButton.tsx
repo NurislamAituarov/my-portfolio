@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import styles from './EmailButton.module.scss';
-import { APP_URL } from '@/utils/constants';
 import email from '@/assets/img/email.svg';
 
 export function EmailButton() {

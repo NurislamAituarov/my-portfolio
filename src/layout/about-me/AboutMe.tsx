@@ -1,7 +1,6 @@
 import { TMeData } from '@/types/interface';
 import Image from 'next/image';
 
-import { APP_URL } from '@/utils/constants';
 import { EmailButton } from '@/components/base/email-btn/EmailButton';
 import { DescriptionButton } from '@/components/base/description-btn/DescriptionButton';
 import { TextAnimation } from '@/components/base/text-animation/TextAnimation';
