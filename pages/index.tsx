@@ -10,9 +10,8 @@ export default function HomePage(props: IPropsHome) {
 }
 
 export async function getStaticProps() {
-  console.log(API_URL);
-  // const { data: links } = await httpClient.get(`${API_URL}/links`);
-  // const { data: me } = await httpClient.get(`${API_URL}/me`);
+  const { data: links } = await httpClient.get(`${API_URL}/links`);
+  const { data: me } = await httpClient.get(`${API_URL}/me`);
   return {
     props: {
       links,
