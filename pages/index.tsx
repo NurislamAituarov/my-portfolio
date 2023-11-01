@@ -7,12 +7,6 @@ import { me } from './api/me';
 import { useEffect } from 'react';
 
 export default function HomePage(props: IPropsHome) {
-  useEffect(() => {
-    httpClient.get(`${API_URL}/links`).then((response) => {
-      console.log(response.data);
-    });
-  }, []);
-
   return <Home {...props} />;
 }
 
