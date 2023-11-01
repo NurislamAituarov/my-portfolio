@@ -37,7 +37,6 @@ export function GridItem({ item }: IGridItem) {
   const handelMore = () => {
     setOpenModal((val) => !val);
   };
-
   return (
     <a href={item.link[0]} rel="noreferrer" target="_blank" className={styles.item}>
       <div
