@@ -1,5 +1,5 @@
 .modal {
-  @apply bg-black absolute z-30 rounded-lg text-white p-5;
+  @apply bg-black absolute z-30 rounded-lg text-white p-2 pl-6;
   max-width: 550px;
   max-height: 350px;
   overflow-y: scroll;
