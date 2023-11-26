@@ -48,6 +48,13 @@ const variantsChildren = {
 
 export function SkillsSidebar() {
   const [skills] = useState(listSkills);
+  const url = process.env.NODE_ENV === 'production' ? '/my-portfolio/' : '/';
+
+  const playSound = () => {
+    const audio = new Audio(`${url}sound.mp3`);
+    audio.play();
+  };
+
   return (
     <div className={styles.skills__wrapper}>
       <motion.div
@@ -58,7 +65,12 @@ export function SkillsSidebar() {
         className={styles.skills__container}>
         {skills.map((skill, ind) => {
           return (
-            <motion.div variants={variantsChildren} className={styles.skill} key={ind}>
+            <motion.div
+              variants={variantsChildren}
+              className={styles.skill}
+              key={ind}
+              onAnimationStart={playSound}
+              onAnimationComplete={playSound}>
               {skill}
             </motion.div>
           );
