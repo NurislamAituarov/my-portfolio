@@ -2,7 +2,7 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  images: { domains: ['localhost', 'i.ytimg.com', 'nurislamaituarov.github.io/my-portfolio/'] },
+  images: { domains: ['localhost', 'i.ytimg.com', 'nurislamaituarov.github.io'] },
   env: {
     APP_URL: process.env.REACT_APP_URL,
     APP_ENV: process.env.REACT_APP_ENV,
