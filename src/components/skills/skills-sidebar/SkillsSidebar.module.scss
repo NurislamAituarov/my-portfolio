@@ -17,4 +17,23 @@
   .skill {
     padding: 5px;
   }
+  .skills__btn {
+    color: red;
+  }
+}
+
+@media all and (max-width: 1800px) {
+  .skills__wrapper {
+    width: calc(var(--index) * 20);
+  }
+}
+@media all and (max-width: 900px) {
+  .skills__wrapper {
+    width: calc(var(--index) * 30);
+  }
+}
+@media all and (max-width: 768px) {
+  .skills__wrapper {
+    width: 100%;
+  }
 }
