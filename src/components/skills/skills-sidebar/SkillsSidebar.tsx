@@ -34,7 +34,7 @@ const variants = {
   visible: {
     transition: {
       when: 'beforeChildren',
-      staggerChildren: 0.5,
+      staggerChildren: 0.9,
     },
   },
   hidden: {},
@@ -51,9 +51,8 @@ export function SkillsSidebar() {
   const [skills] = useState(listSkills);
   const context = useContext(Context);
   const url = process.env.NODE_ENV === 'production' ? '/my-portfolio/' : '/';
-
+  const audio = new Audio(`${url}sound.mp3`);
   const playSound = () => {
-    const audio = new Audio(`${url}sound.mp3`);
     audio.play();
   };
 
@@ -66,6 +65,7 @@ export function SkillsSidebar() {
       <button onClick={closeSkills} className={styles.skills__btn}>
         Закрыть
       </button>
+
       <motion.div
         layout
         variants={variants}
