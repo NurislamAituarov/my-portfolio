@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from './SkillsSidebar.module.scss';
+import { Context } from '@/utils/context';
 
 const listSkills = [
   'HTML5',
@@ -48,6 +49,7 @@ const variantsChildren = {
 
 export function SkillsSidebar() {
   const [skills] = useState(listSkills);
+  const context = useContext(Context);
   const url = process.env.NODE_ENV === 'production' ? '/my-portfolio/' : '/';
 
   const playSound = () => {
@@ -55,8 +57,15 @@ export function SkillsSidebar() {
     audio.play();
   };
 
+  const closeSkills = () => {
+    context?.setSkillsOpen && context.setSkillsOpen((value: boolean) => !value);
+  };
+
   return (
     <div className={styles.skills__wrapper}>
+      <button onClick={closeSkills} className={styles.skills__btn}>
+        Закрыть
+      </button>
       <motion.div
         layout
         variants={variants}
