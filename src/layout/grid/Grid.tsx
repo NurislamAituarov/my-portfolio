@@ -1,5 +1,5 @@
-import { TLinks } from '@/types/interface';
 import { GridItem } from './GridItem';
+import { TLinks } from '@/types/interface';
 import styles from './grid.module.scss';
 
 interface IPropsLinks {

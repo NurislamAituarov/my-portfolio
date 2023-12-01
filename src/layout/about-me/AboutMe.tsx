@@ -3,10 +3,11 @@ import Image from 'next/image';
 
 import { EmailButton } from '@/components/base/email-btn/EmailButton';
 import { DescriptionButton } from '@/components/base/description-btn/DescriptionButton';
+import { SkillsBtn } from '@/components/skills/skills-btn/SkillsBtn';
 import { TextAnimation } from '@/components/base/text-animation/TextAnimation';
+
 import avatar from '@/assets/img/avatar.jpg';
 import verified from '@/assets/img/verified.svg';
-import { SkillsBtn } from '@/components/skills/skills-btn/SkillsBtn';
 
 import styles from './AboutMe.module.scss';
 interface IPropsMe {

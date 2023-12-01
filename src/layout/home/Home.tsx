@@ -1,17 +1,18 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { loadSlim } from 'tsparticles-slim';
 import Particles from 'react-tsparticles';
 import { useMediaQuery } from 'react-responsive';
 
-import { IPropsHome } from '@/types/interface';
-import { MetaTitle } from '@/components/meta-title/MetaTitle';
-import { Circles } from '@/components/circles/Circles';
-import { CONFIGURE_PARTICLES } from '@/utils/constants';
-import { Context } from '@/utils/context';
 import { AboutMe } from '../about-me/AboutMe';
 import { Grid } from '../grid/Grid';
-import styles from './Home.module.scss';
 import { SkillsSidebar } from '@/components/skills/skills-sidebar/SkillsSidebar';
+import { MetaTitle } from '@/components/meta-title/MetaTitle';
+import { Circles } from '@/components/circles/Circles';
+
+import { Context } from '@/utils/context';
+import { CONFIGURE_PARTICLES } from '@/utils/constants';
+import { IPropsHome } from '@/types/interface';
+import styles from './Home.module.scss';
 
 export function Home({ links, me }: IPropsHome) {
   const [skillsOpen, setSkillsOpen] = useState(false);

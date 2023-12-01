@@ -2,9 +2,9 @@ import { useContext, useRef } from 'react';
 import { Transition } from 'react-transition-group';
 import cn from 'classnames';
 
+import { CloseBtn } from '../base/close-btn/CloseBtn';
 import { Context } from '@/utils/context';
 import { TLinks } from '@/types/interface';
-import { CloseBtn } from '../base/close-btn/CloseBtn';
 import styles from './PopUpModal.module.scss';
 
 interface IPopUpModal {
