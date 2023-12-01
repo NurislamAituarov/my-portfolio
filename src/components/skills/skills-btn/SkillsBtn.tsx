@@ -1,6 +1,6 @@
+import { useContext } from 'react';
 import { Context } from '@/utils/context';
 import styles from './SkillsBtn.module.scss';
-import { useContext } from 'react';
 
 export function SkillsBtn() {
   const context = useContext(Context);

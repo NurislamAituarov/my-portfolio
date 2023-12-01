@@ -3,10 +3,10 @@ import { createPortal } from 'react-dom';
 
 import { PopUpModal } from '@/components/popup-modal/PopUpModal';
 import { AnimateBlock } from '@/components/animate-block/AnimateBlock';
+import { DetailsBtn } from '@/components/base/details-btn/DetailsBtn';
 import { Icon } from '@/components/icons';
 import { TLinks } from '@/types/interface';
 import styles from './grid.module.scss';
-import { DetailsBtn } from '@/components/base/details-btn/DetailsBtn';
 
 interface IGridItem {
   item: TLinks;
