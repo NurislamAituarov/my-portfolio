@@ -7,9 +7,9 @@ import { SkillsBtn } from '@/components/skills/skills-btn/SkillsBtn';
 import { TextAnimation } from '@/components/base/text-animation/TextAnimation';
 
 import avatar from '@/assets/img/avatar.jpg';
-import verified from '@/assets/img/verified.svg';
 
 import styles from './AboutMe.module.scss';
+import { Icon } from '@/components/icons';
 interface IPropsMe {
   me: TMeData;
 }
@@ -30,8 +30,7 @@ export function AboutMe({ me }: IPropsMe) {
 
       <div className={styles.heading}>
         <TextAnimation text="портфолио" animationClass="one" />
-
-        <Image src={verified} alt="verified" height={16} width={16} />
+        <Icon name="verified" height={30} width={40} />
       </div>
       <div style={{ display: 'flex', width: 'max-content', margin: '0 auto' }}>
         <EmailButton />
