@@ -1,6 +1,12 @@
 import icons from './IconsPath';
 
-export function Icon({ name }: { name: string }) {
+interface Props {
+  name: string;
+  width?: number;
+  height?: number;
+}
+
+export function Icon({ name, width = 76, height = 60 }: Props) {
   const viewBox = (name: string): string => {
     switch (name) {
       case 'whatsapp':
@@ -11,6 +17,7 @@ export function Icon({ name }: { name: string }) {
       case 'telegram':
       case 'todo':
       case 'on_track':
+      case 'verified':
         return '0 0 24 24';
       case 'logistic':
         return '0 0 612 612';
@@ -26,8 +33,8 @@ export function Icon({ name }: { name: string }) {
       <svg
         version="1.1"
         viewBox={viewBox(name)}
-        width={name === 'auto' ? 176 : 76}
-        height={name === 'whatsapp' ? 55 : 60}
+        width={name === 'auto' ? 176 : width}
+        height={name === 'whatsapp' ? 55 : height}
         fill="#0ea5e9"
         dangerouslySetInnerHTML={{ __html: icons[name] }}
       />

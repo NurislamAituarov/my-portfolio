@@ -29,8 +29,8 @@ export function Home({ links, me }: IPropsHome) {
 
   return (
     <Context.Provider value={{ links, setSkillsOpen, skillsOpen }}>
+      <MetaTitle title="My portfolio | Все полезные ссылки тут" />
       <section className={styles.section}>
-        <MetaTitle title="My portfolio | Все полезные ссылки тут" />
         <div className={styles.container}>
           <AboutMe me={me} />
           <Grid links={links} />

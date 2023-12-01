@@ -10,7 +10,7 @@ export function SkillsBtn() {
       style={context?.skillsOpen ? { background: 'black' } : {}}
       className={styles['skills__btn']}
       onClick={() => context?.setSkillsOpen && context.setSkillsOpen((value: boolean) => !value)}>
-      <span>Skills</span>
+      <span>Навыки</span>
     </div>
   );
 }
