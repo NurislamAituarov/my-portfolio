@@ -16,6 +16,9 @@
     em {
       @apply text-red-400;
     }
+    .description {
+      @apply inline-block text-xs leading-4;
+    }
     a:hover {
       text-decoration: underline;
       text-underline-offset: 4px;
@@ -42,7 +45,7 @@
 }
 
 .technical-list {
-  font-size: 12px;
+  @apply text-xs leading-4;
 }
 
 @media screen and (max-width: 520px) {

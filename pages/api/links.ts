@@ -31,6 +31,31 @@ export const links = [
   {
     _id: 'link_2',
     icon: {
+      name: 'on_track',
+      width: 76,
+    },
+    gradient: { from: '#000000', to: '#00a6ff' },
+    link: [
+      'https://nurislamaituarov.github.io/on-track.2',
+      'https://github.com/NurislamAituarov/on-track.2',
+    ],
+    title: 'On Track',
+    about_application: [
+      'Vue, Typescript, Vite, Composition API, Tailwindcss, Реализовано адаптивная верстка для мобильных устройств.',
+    ],
+    description: `Первая страница: Список каждого часа
+    На этой странице пользователь может видеть список часов с выпадающим меню для выбора активности и запуска таймера.
+    Для каждого часа имеется выпадающий список, который позволяет выбрать из различных активностей, таких как работа, отдых, занятия спортом и т.д.
+    Вторая страница: Список активностей с выбором времени выполнения
+    На этой странице пользователь может просматривать список доступных активностей. При выборе каждой активности пользователь может указать время, которое он планирует уделить данной активности.
+    Третья страница: Прогресс всех выбранных активностей
+    На этой странице отображается прогресс всех выбранных пользователем активностей.
+    Такие данные могут помочь пользователям оценить, насколько эффективно они распределяют свое время и на какие активности уходит больше всего времени. 
+    `,
+  },
+  {
+    _id: 'link_3',
+    icon: {
       name: 'todo',
       width: 76,
     },
@@ -54,26 +79,6 @@ export const links = [
       'Адаптация под мобильные устройства',
       'Возможность создавать задачу',
       'Обилие плавных, красивых анимаций, отзывчивость сайта на действия юзера ',
-    ],
-  },
-  {
-    _id: 'link_3',
-    icon: {
-      name: 'auth',
-      width: 76,
-    },
-    gradient: {
-      from: '#4ade80',
-      to: '#60a5fa',
-    },
-    link: [
-      'https://nurislamaituarov.github.io/project-auth',
-      'https://github.com/NurislamAituarov/project-auth',
-    ],
-    title: 'Authorization App',
-    about_application: [
-      'React, Redux, Material-UI, React Hook-Form,',
-      'Node.js, Express, MongoDB, для авторизации использовал JSON Web Token.',
     ],
   },
   {
@@ -105,6 +110,26 @@ export const links = [
   {
     _id: 'link_5',
     icon: {
+      name: 'auth',
+      width: 76,
+    },
+    gradient: {
+      from: '#4ade80',
+      to: '#60a5fa',
+    },
+    link: [
+      'https://nurislamaituarov.github.io/project-auth',
+      'https://github.com/NurislamAituarov/project-auth',
+    ],
+    title: 'Authorization App',
+    about_application: [
+      'React, Redux, Material-UI, React Hook-Form,',
+      'Node.js, Express, MongoDB, для авторизации использовал JSON Web Token.',
+    ],
+  },
+  {
+    _id: 'link_6',
+    icon: {
       name: 'resume',
       width: 76,
     },
@@ -116,7 +141,7 @@ export const links = [
     title: 'Job resume',
   },
   {
-    _id: 'link_6',
+    _id: 'link_7',
     icon: {
       name: 'telegram',
       width: 76,
@@ -129,7 +154,7 @@ export const links = [
     title: 'Telegram',
   },
   {
-    _id: 'link_7',
+    _id: 'link_8',
     icon: {
       name: 'whatsapp',
       width: 76,
