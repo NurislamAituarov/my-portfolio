@@ -18,7 +18,6 @@ export function AboutMe({ me }: IPropsMe) {
     <div className={styles.me}>
       <div className={styles['image-wrapper']}>
         <Image
-          // src={`${APP_URL}/${me.avatar}`}
           src={avatar}
           width={190}
           height={190}
@@ -29,8 +28,7 @@ export function AboutMe({ me }: IPropsMe) {
       </div>
 
       <div className={styles.heading}>
-        <TextAnimation text="My portfolio" animationClass="one" />
-        {/* <span>My portfolio</span> */}
+        <TextAnimation text="портфолио" animationClass="one" />
 
         <Image src={verified} alt="verified" height={16} width={16} />
       </div>

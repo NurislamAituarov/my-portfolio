@@ -46,7 +46,7 @@ export function GridItem({ item }: IGridItem) {
         }}>
         <Icon name={item.icon.name} />
 
-        {!['link_6', 'link_5', 'link_7'].includes(item._id) && (
+        {!['link_6', 'link_7', 'link_8'].includes(item._id) && (
           <DetailsBtn handelMore={handelMore} />
         )}
       </div>

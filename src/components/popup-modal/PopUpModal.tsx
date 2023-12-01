@@ -27,8 +27,8 @@ export const PopUpModal = ({ open, handelMore, item }: IPopUpModal) => {
               <strong>Названия :</strong> {item.title}
             </div>
             {item.technical_task && (
-              <strong>
-                Техническое задания:
+              <div className={styles.title}>
+                <strong>Техническое задания:</strong>
                 <br />
                 {item.technical_task.map((el, ind) => {
                   return (
@@ -37,13 +37,13 @@ export const PopUpModal = ({ open, handelMore, item }: IPopUpModal) => {
                     </div>
                   );
                 })}
-              </strong>
+              </div>
             )}
             {item.description && (
               <div className={styles.title}>
                 <strong>Краткое описание:</strong>
                 <br />
-                <span>{item.description}</span>
+                <span className={styles.description}>{item.description}</span>
               </div>
             )}
             <div className={styles.title}>
