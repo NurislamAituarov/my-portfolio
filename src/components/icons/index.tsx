@@ -18,11 +18,10 @@ export function Icon({ name, width = 76, height = 60 }: Props) {
       case 'todo':
       case 'on_track':
       case 'verified':
+      case 'auth':
         return '0 0 24 24';
       case 'logistic':
         return '0 0 612 612';
-      case 'auth':
-        return '0 0 40 40';
       default:
         return '0 0 0 0';
     }
